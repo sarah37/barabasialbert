@@ -51,7 +51,7 @@ simulation.force("link")
   .links(edgesD);
 
 // initialise stats display
-var margin = {top: 20, right: 20, bottom: 20, left: 30},
+var margin = {top: 20, right: 20, bottom: 35, left: 35},
     wStats = 400 - margin.left - margin.right,
     hStats = 350 - margin.top - margin.bottom
 
@@ -76,13 +76,22 @@ statsG.append("g")
 
 statsG.append("g")
     .attr("class", "y axis")
-    .append("text") // title
-    .attr("transform", "rotate(-90)") // rotate the text!
-    .attr("transform", "translate(20,0)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Number of nodes");
+
+statsG.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(270)")
+    .attr("font-size", "14px")
+    .attr("y", -20)
+    .text("Number of nodes")
+
+statsG.append("text")
+    .attr("text-anchor", "end")
+    .attr("font-size", "14px")
+    .attr("x", wStats)
+    .attr("y", 325)
+    .text("Degree")
+
+    
 
 // this will create the initial display, afterwards, it will automatically add a new node every 2 seconds and update()
 update()
