@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+		<script src="https://d3js.org/d3.v4.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+	</head>
+
+<body>
+	<div id="container">
+		<div id="graphDiv"></div>
+		<div id="infoDiv">
+			This is a simulation of a random, scale-free network. It is based on the Barabási–Albert model, an algorithm for generating these kinds of networks. It uses a preferential attachment mechanism, meaning that the probability for a new node to connect to a particular existing node is determined by the degree (i.e. the amount of connections) of the existing node. A new node enters every 2 seconds. The amount of connections a new node forms and whether preferential attachment is used (otherwise nodes will attach at random) can be changed below and will go into effect once the simulation is restarted.
+			<div id="controls">
+				<p><b>Connections of each new node</b>
+				<input type="range" name="" id="mRange" min="1" max="5" step="1" value="1" />
+				<span class="left">1</span><span class="right">5</span></p>
+				<p><input type="checkbox" id="prefAt" checked></p><label for="prefAt"><b>Preferential attachment</b></label>
+				<p><input type="button" name="Restart" id="restartButton" value="Restart"></p>
+			</div>
+		</div>
+		<div id="statsDiv"></div>
+	</div>
+	<script type="text/javascript" src="simulation.js"></script>
+</body>
+</html>

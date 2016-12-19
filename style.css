@@ -1,0 +1,189 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+    background-color: #dee8ea
+}
+
+#container {
+    width: 1200px;
+    height: 800px;
+    /*border: 1px solid #000;*/
+    background-color: #fff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+#graphDiv {
+  height: 800px;
+  width: 800px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#statsDiv {
+  height: 350px;
+  width: 400px;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#infoDiv {
+  height: 410px;
+  width: 360px;
+  padding: 20px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.edge {
+  stroke: #bbb;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+}
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+  fill: #074E67;
+}
+
+.bar {
+    fill: #074E67;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/*inputs infobox*/
+#controls {
+  text-align: center;
+  margin-top: 25px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0 10px;
+  width: 80%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 80%;
+  height: 2px;
+  cursor: pointer;
+  background: #000;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 0px #fff;
+  height: 20px;
+  width: 10px;
+  background: #555;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+
+}
+
+input[type=range]::-moz-range-track {
+  width: 80%;
+  height: 2px;
+  cursor: pointer;
+  background: #000;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 0px #000;
+  height: 20px;
+  width: 10px;
+  background: #555;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  margin-left: 20px;
+}
+
+.right {
+  float: right;
+  margin-right: 20px;
+}
+
+.left, .right {
+  font-weight: bold;
+  line-height: 22px;
+}
+
+
+/*button*/
+#restartButton {
+    display: inline-block;
+    position: relative;
+    background-color: #555;
+    color: #fff;
+    width: 200px;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#restartButton:hover {
+  transition: background-color 0.5s;
+  background-color: #000
+}
+
+/*checkboxes*/
+
+label {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+label:before {
+  display: block;
+  content: '';
+  height: 20px;
+  width: 20px;
+  border: 2px solid #555;
+  float: left;
+  margin-right: 5px;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #555;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
